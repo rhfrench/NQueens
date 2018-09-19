@@ -1,4 +1,4 @@
-package N_Queens
+package main
 
 import (
 	"fmt"
@@ -11,18 +11,12 @@ var numOfSeconds float64 = 0
 var numOfSolutions int64 = 0
 
 func main() {
+	var board[][]bool = createBoard()
+  	var i int = 0
 
-var board[][]bool = CreateBoard()
-  var i int = 0
-
-	for i = 0; i <= N; i++ {
+	for i = 0; i <= n; i++ {
 		startTime := time.Now()
 		board[0][1] = true
-
-
-
-
-
 		duration := time.Since(startTime)
 		numOfSeconds = duration.Seconds()
 
